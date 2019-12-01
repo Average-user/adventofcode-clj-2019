@@ -1,45 +1,29 @@
-# adventofcode-clj-2019
+# Advent of Code 2019. Solutions in Clojure
 
-FIXME: description
+Solutions to the problems in [here](https://adventofcode.com/2019). My timezone
+sucks, so I'll be doing the solutions much later than when the problems are
+released, but whatever.
 
-## Installation
+The command:
 
-Download from http://example.com/FIXME.
+``` text
+lein run a b c
+```
 
-## Usage
+Will show solutions for the specified days (a b c ...). If no arguments are
+given will show the solutions of every day so far implemented. Example:
 
-FIXME: explanation
+``` text
+$ lein run 1
 
-    $ java -jar adventofcode-clj-2019-0.1.0-standalone.jar [args]
+  =========================================
+ | Day | Star | Solution                   |
+ |=========================================|
+ |  1  |  *   | 3382136                    |
+ |     |  **  | 5070314                    |
+  =========================================
+"Elapsed time: 18.774805 msecs"
 
-## Options
+```
 
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
-# adventofcode-clj-2019
+If you want to try your inputs, input files are stored at `resources/dayXX.txt`
