@@ -1,8 +1,9 @@
 (ns adventofcode-clj-2019.core
   (:require [adventofcode-clj-2019.util :as u]
-            [adventofcode-clj-2019.day01]))
+            [adventofcode-clj-2019.day01]
+            [adventofcode-clj-2019.day02]))
 
-(def completed [1])
+(def completed [1 2])
 
 (defn my-format [x]
   (str x (apply str (take (- 26 (count (str x))) (repeat " "))) " |"))
