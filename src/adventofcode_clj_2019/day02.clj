@@ -17,15 +17,11 @@
       (execute 0)
       (first)))
 
-(def enum-pairs
-  (letfn [(pairs [i] (map (fn [j] [j (- i j)]) (range (inc i))))]
-    (mapcat pairs (range))))
-
 (defn part-2 []
-  (let [tape  (mapv u/parse-int(cs/split (u/input 2) #","))
-        f     (fn [[x y]] (+ (* 100 x) y))
-        check (fn [[x y]] (= 19690720 (first (execute (assoc tape 1 x 2 y) 0))))]
-    (->> enum-pairs
+  (let [tape   (mapv u/parse-int (cs/split (u/input 2) #","))
+        output (fn [[x y]] (+ (* 100 x) y))
+        check  (fn [[x y]] (= 19690720 (first (execute (assoc tape 1 x 2 y) 0))))]
+    (->> (for [x (range 99), y (range 99)] [x y])
          (filter check)
          (first)
-         (f))))
+         (output))))
