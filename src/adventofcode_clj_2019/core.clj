@@ -2,9 +2,10 @@
   (:require [adventofcode-clj-2019.util :as u]
             [adventofcode-clj-2019.day01]
             [adventofcode-clj-2019.day02]
-            [adventofcode-clj-2019.day03]))
+            [adventofcode-clj-2019.day03]
+            [adventofcode-clj-2019.day04]))
 
-(def completed [1 2 3])
+(def completed [1 2 3 4])
 
 (defn my-format [x]
   (str x (apply str (take (- 26 (count (str x))) (repeat " "))) " |"))

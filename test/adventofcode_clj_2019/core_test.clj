@@ -2,7 +2,8 @@
   (:require [clojure.test :refer :all]
             [adventofcode-clj-2019.day01 :as day01]
             [adventofcode-clj-2019.day02 :as day02]
-            [adventofcode-clj-2019.day03 :as day03]))
+            [adventofcode-clj-2019.day03 :as day03]
+            [adventofcode-clj-2019.day04 :as day04]))
 
 (deftest day01-part-1 (is (= (day01/part-1) 3382136)))
 (deftest day01-part-2 (is (= (day01/part-2) 5070314)))
@@ -12,3 +13,6 @@
 
 (deftest day03-part-1 (is (= (day03/part-1) 2129)))
 (deftest day03-part-2 (is (= (day03/part-2) 134662)))
+
+(deftest day04-part-1 (is (= (day04/part-1) 1605)))
+(deftest day04-part-2 (is (= (day04/part-2) 1102)))
