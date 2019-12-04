@@ -12,12 +12,12 @@
                              ns)))))
 
 (defn check-criteria [[a b] f n]
-   (and (some (comp f count) (partition-by identity n))
-        (neg? (compare a n))
-        (pos? (compare b n))))
+   (and (neg? (compare a n))
+        (pos? (compare b n))
+        (some (comp f count) (partition-by identity n))))
 
 (def my-range
-  (->> (cs/split (u/input 4) #"-") (map u/parse-int) sort vec (mapv digits)))
+  (->> (cs/split (u/input 4) #"-") (map u/parse-int) sort (mapv digits)))
 
 (defn part-1 []
   (->> (gen-numbers 6)
