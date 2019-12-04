@@ -19,9 +19,6 @@
 
 (defn part-2 []
   (let [tape   (mapv u/parse-int (cs/split (u/input 2) #","))
-        output (fn [[x y]] (+ (* 100 x) y))
-        check  (fn [[x y]] (= 19690720 (first (execute (assoc tape 1 x 2 y) 0))))]
-    (->> (for [x (range 99), y (range 99)] [x y])
-         (filter check)
-         (first)
-         (output))))
+        check  (fn [x y] (= 19690720 (first (execute (assoc tape 1 x 2 y) 0))))]
+    (first (for [x (range 99), y (range 99) :when (check x y)]
+             (+ (* 100 x) y)))))
