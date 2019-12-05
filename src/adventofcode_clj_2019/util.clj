@@ -7,3 +7,7 @@
 
 (defn parse-int [s]
   (Integer. (re-find  #"\d+" s)))
+
+(defn digits [n]
+  (loop [ds '(), n n]
+    (if (zero? n) (vec ds) (recur (cons (rem n 10) ds) (quot n 10)))))
