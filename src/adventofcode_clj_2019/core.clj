@@ -4,9 +4,10 @@
             [adventofcode-clj-2019.day02]
             [adventofcode-clj-2019.day03]
             [adventofcode-clj-2019.day04]
-            [adventofcode-clj-2019.day05]))
+            [adventofcode-clj-2019.day05]
+            [adventofcode-clj-2019.day06]))
 
-(def completed [1 2 3 4 5])
+(def completed [1 2 3 4 5 6])
 
 (defmacro my-time
   [expr]
