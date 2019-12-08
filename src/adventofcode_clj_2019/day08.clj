@@ -3,15 +3,13 @@
             [clojure.string :as cs]))
 
 (def layers
-  (->> (cs/split (u/input 8) #"\n")
-       (first)
-       (partition 150)))
+  (partition 150 (cs/trim (u/input 8))))
 
 (defn part-1 []
-  (let [frs (->> layers
-                 (map frequencies)
-                 (sort-by #(get % \0))
-                 (first))]
+  (let [frs (->> layers                 
+                 (sort-by #(get (frequencies %) \0))
+                 (first)
+                 (frequencies))]
     (* (frs \2) (frs \1))))
 
 (defn part-2 []
