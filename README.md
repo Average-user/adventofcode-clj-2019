@@ -1,17 +1,13 @@
 # Advent of Code 2019. Solutions in Clojure
 
-Solutions to the problems in [here](https://adventofcode.com/2019). My timezone
-sucks, so I'll be doing the solutions much later than when the problems are
-released, but whatever.
-
-The command:
+Solutions to [Adventofcode2019](https://adventofcode.com/2019).
 
 ``` text
 lein run a b c
 ```
 
-Will show solutions for the specified days (a b c ...). If no arguments are
-given will show the solutions of every day so far implemented. Example:
+Will show solutions forx days specified (a b c ...). Will run all
+implemented days if no argument is given.
 
 ``` text
 $ lein run
