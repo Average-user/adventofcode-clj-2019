@@ -9,6 +9,9 @@
 (def program
   (mapv u/parse-int (cs/split (u/input 7) #",")))
 
+(defn parse-opcode [n]
+  (vec (reverse (take 4 (-> n u/digits reverse (concat (repeat 0)))))))
+
 (defn run [program phases]
   (last (reduce (fn [out p] (d5/execute (cons p out) program))
                 [0] phases)))
@@ -24,8 +27,8 @@
           (setv [tape i f0 f1 f2]
             (assoc tape (tape (+ i 3)) (if (f0 (f1 (+ i 1)) (f2 (+ i 2))) 1 0)))]
     (as/go-loop [tape tape, i 0]
-      (let [m (partial d5/mode tape)]
-        (match (d5/parse-opcode (get tape i))
+      (let [m (partial d5/mode 0 tape)]
+        (match (parse-opcode (get tape i))
           [_,_,9,9] :exit
           [a,b,0,1] (recur (mkop tape i + (m b) (m a)) (+ i 4))
           [a,b,0,2] (recur (mkop tape i * (m b) (m a)) (+ i 4))
