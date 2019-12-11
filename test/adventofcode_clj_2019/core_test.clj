@@ -9,7 +9,8 @@
             [adventofcode-clj-2019.day07 :as day07]
             [adventofcode-clj-2019.day08 :as day08]
             [adventofcode-clj-2019.day09 :as day09]
-            [adventofcode-clj-2019.day10 :as day10]))
+            [adventofcode-clj-2019.day10 :as day10]
+            [adventofcode-clj-2019.day11 :as day11]))
 
 (deftest day01-part-1 (is (= (day01/part-1) 3382136)))
 (deftest day01-part-2 (is (= (day01/part-2) 5070314)))
@@ -45,3 +46,11 @@
 
 (deftest day10-part-1 (is (= (day10/part-1) 276)))
 (deftest day10-part-2 (is (= (day10/part-2) 1321)))
+
+(deftest day11-part-1 (is (= (day11/part-1) 2469)))
+(deftest day11-part-2 (is (= (day11/part-2) ["#  # #     ##  ####  ##  ####  ##  #  #"
+                                             "# #  #    #  #    # #  # #    #  # #  #"
+                                             "##   #    #      #  #  # ###  #    #  #"
+                                             "# #  #    #     #   #### #    # ## #  #"
+                                             "# #  #    #  # #    #  # #    #  # #  #"
+                                             "#  # ####  ##  #### #  # ####  ###  ## "])))
