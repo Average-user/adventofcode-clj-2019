@@ -9,10 +9,11 @@
             [adventofcode-clj-2019.day07]
             ;Not adding day 8 due to of weird output
             [adventofcode-clj-2019.day09]
-            [adventofcode-clj-2019.day10]))
+            [adventofcode-clj-2019.day10]
             ; Not adding day 11 due to weird output
+            [adventofcode-clj-2019.day12]))
 
-(def completed [1 2 3 4 5 6 7 9 10])
+(def completed [1 2 3 4 5 6 7 9 10 12])
 
 (defmacro my-time
   [expr]
